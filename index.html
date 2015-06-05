@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="Content/foundation/normalize.css" rel="stylesheet" />
+    <link href="Content/foundation/foundation.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+
+    <!--Shim for HTML5 elements-->
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+
+    <!--Nav Bar-->
+    <div class="row">
+        <div class="large-12 columns">
+            <nav class="nave-bar right">
+                <ul class="button-group">
+                    <li><a href="bandedTemplate.html" class="button">Banded</a></li>
+                    <li><a href="feedTemplate.html" class="button">Feed</a></li>
+                    <li><a href="marketingTemplate.html" class="button">Marketing</a></li>
+                    <li><a href="orbitTemplate.html" class="button">Orbit</a></li>
+                    <li><a href="index.html" class="button">Home</a></li>
+                </ul>
+            </nav>
+            <h1>
+                Foundation 5
+                <small>Templates and Building Blocks</small>
+            </h1>
+            <hr />
+        </div>
+    </div>
+    <!--End Nav-->
+
+    <!-- Main Page Content and Sidebar -->
+    <div class="row">
+        <!-- Main Blog Content -->
+        <div class="large-9 columns" role="content">
+            <article>
+                <h3>
+                    <a href="#">Sample Rendered Blog Post</a>
+                    <small>by <a href="#">John Smith</a>,August 12, 2012.</small>
+                </h3>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>This demo site is made with Zurb Foundation 5, and demonstrates a few different templates that could be used for different types of pages. There is also a "bare-bones" <a href="emptyTemplate.html">empty template</a> (with no body and only the HTML &lt;head&gt; and the &lt;script&gt; tags at the end of the body).</p>
+                        <p>If this were a real blog post, it could be a full post or a summary with a pre-set number of words. As it is, this blog post is somewhat "special" in that there's already some built-in dependencies on the CSS framework being used (hence these couple of paragraphs to the left of an image).</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <img src="http://placehold.it/400x240&text=[img]" />
+                    </div>
+                </div>
+                <p>If this were a simple markdown file pre-rendered as HTML or dynamically rendered as HTML by JavaScript, then there would not be any multi-column layout, as above. Instead, it would render with the most basic of HTML that is generated from markdown.</p>
+                <p>Whether to use markdown or HTML is a matter of what you expect to author. HTML has many advantages in flexibility and content, but bring with it all the complexities and assumptions you might have to make in dynamically rendering it inside a given layout. Markdown has the advantage of simplicity, but is much more restricted on what can and cannot be rendered.</p>
+                <p>Below is a simple mustache-styled set of placeholders for a blog post. These are rendered inside an &lt;article&gt; tag.</p>
+            </article>
+
+            <hr />
+
+            <article>
+                <h3>
+                    {{blogPost.title}}
+                    <small>by {{blogPost.authorName}}, {{blogPost.date}}.</small>
+                </h3>
+
+                <div class="row">
+                    {{blogPost.body}}
+                </div>
+            </article>
+
+            <hr />
+
+            <article>
+                <h3>
+                    Selected <a href="http://zurb.com/building-blocks">Building Blocks</a>
+                    <small>by Me, today.</small>
+                </h3>
+
+                <div class="row">
+                    <h4><a href="http://zurb.com/building-blocks/button-option-group">Button Option Group</a></h4>
+                    <div class="button-group" data-grouptype="OR">
+                        <button href="#" class="small button primary radius">Buy it now</button>
+                        <button href="#" class="small button success radius">Learn More</button>
+                    </div>
+                    <style type="text/css">
+                        .button-group {
+                          position: relative;
+                          display: inline-block;
+                          margin: 1rem 0; }
+                          .button-group:before {
+                            content: attr(data-grouptype);
+                            z-index: 99999;
+                            color: #999;
+                            display: block;
+                            font-size: 1rem;
+                            padding: 0.25em;
+                            border-radius: 50%;
+                            background: #fff;
+                            position: absolute;
+                            left: 42.5%;
+                            top: 0.35rem; }
+                          .button-group button + button {
+                            margin-left: 5px; }
+                    </style>
+                    <hr />
+                    <h4><a href="http://zurb.com/building-blocks/animated-pricing-tables">Animated Pricing Tables</a></h4>
+                    <div class="row">
+                        <div class="large-4 medium-4 columns">
+                            <ul class="pricing-table active-tb shadow mrgn-20-top">
+                                <li class="title">Starter</li>
+                                <li class="bullet-item">512 MB RAM</li>
+                                <li class="bullet-item">50GB Disk</li>
+                                <li class="bullet-item">1 User</li>
+                                <li class="bullet-item">4TB bandwidth</li>
+                                <li class="price">$9</li>
+                                <li class="cta-button"><a class="button text-transform" href="#">Choose</a></li>
+                            </ul>
+                        </div>
+                        <div class="large-4 medium-4 columns">
+                            <ul class="pricing-table active-tb shadow mrgn-20-top">
+                                <li class="title">Starter</li>
+                                <li class="bullet-item">512 MB RAM</li>
+                                <li class="bullet-item">50GB Disk</li>
+                                <li class="bullet-item">1 User</li>
+                                <li class="bullet-item">4TB bandwidth</li>
+                                <li class="price">$9</li>
+                                <li class="cta-button"><a class="button text-transform" href="#">Choose</a></li>
+                            </ul>
+                        </div>
+                        <div class="large-4 medium-4 columns">
+                            <ul class="pricing-table active-tb shadow mrgn-20-top">
+                                <li class="title">Starter</li>
+                                <li class="bullet-item">512 MB RAM</li>
+                                <li class="bullet-item">50GB Disk</li>
+                                <li class="bullet-item">1 User</li>
+                                <li class="bullet-item">4TB bandwidth</li>
+                                <li class="price">$9</li>
+                                <li class="cta-button"><a class="button text-transform" href="#">Choose</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <style type="text/css">
+                        .active-tb {
+                          position: relative;
+                          box-shadow: 0 2px 10px 0 rgba(50, 50, 50, 0.5);
+                          transform: scale(1);
+                          border: 0;
+                          transition: 0.4s ease;
+                          z-index: 13; }
+                          .active-tb:hover {
+                            position: relative;
+                            box-shadow: 0 2px 10px 0 rgba(50, 50, 50, 0.5);
+                            transform: scale(1.25);
+                            border: 0;
+                            z-index: 15; }
+                    </style>
+                </div>
+            </article>
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Sidebar -->
+        <aside class="large-3 columns">
+            <h5>Categories</h5>
+            <ul class="side-nav">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Fun</a></li>
+                <li><a href="#">Weasels</a></li>
+            </ul>
+
+            <div class="panel">
+                <h5>Featured</h5>
+                <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+                <a href="#">Read More &rarr;</a>
+            </div>
+        </aside>
+        <!-- End Sidebar -->
+    </div>
+    <!-- End Main Content and Sidebar -->
+
+    <!-- Footer -->
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr />
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>Sourced from <a href="http://zurb.com/building-blocks/blog-simple-sidebar" target="_blank">Zurb Building Blocks</a> &copy; Copyright no one at all. Go to town.</p>
+                </div>
+                <div class="large-6 columns">
+                    <ul class="inline-list right">
+                        <li><a href="bandedTemplate.html">Banded</a></li>
+                        <li><a href="feedTemplate.html">Feed</a></li>
+                        <li><a href="marketingTemplate.html">Marketing</a></li>
+                        <li><a href="orbitTemplate.html">Orbit</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Script Loading below this point-->
+    <script src="Scripts/foundation/fastclick.js"></script>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/foundation/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
